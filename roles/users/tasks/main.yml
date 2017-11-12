@@ -1,0 +1,9 @@
+---
+
+- user:
+    name: kyle
+    shell: /bin/bash
+
+- authorized_key:
+    user: kyle
+    key: https://github.com/kyleparisi.keys

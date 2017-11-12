@@ -1,0 +1,14 @@
+- name: download binary
+  get_url: 
+    url: https://github.com/superfly/wormhole/releases/download/v0.5.36/wormhole_linux_amd64
+    dest: /usr/local/bin/wormhole
+    mode: 0755
+
+- name: download init.d script
+  get_url: 
+    url: https://gist.githubusercontent.com/kyleparisi/fe5bca5e7634b8d3134930c57cfb6b0f/raw/b2924ca7f7bdaf52758c9a9d3615cbb81625d545/wormhole
+    dest: /etc/init.d/wormhole
+    mode: 0755
+
+- name: update init.d
+  raw: update-rc.d wormhole defaults

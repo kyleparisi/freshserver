@@ -1,0 +1,12 @@
+---
+
+- apt_repository:
+    repo: deb http://nginx.org/packages/ubuntu/ xenial nginx
+
+- apt_repository:
+    repo: deb-src http://nginx.org/packages/ubuntu/ xenial nginx
+
+- name: apt install nginx -y
+  apt:
+    name: nginx
+    allow_unauthenticated: yes

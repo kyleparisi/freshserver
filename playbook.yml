@@ -6,4 +6,5 @@
     - { role: wormhole, tags: wormhole }
     - { role: users, tags: users}
     - { role: zerotier, tags: zerotier }
+    - { role: nginx, tags: nginx }
 

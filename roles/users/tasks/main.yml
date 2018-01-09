@@ -7,3 +7,8 @@
 - authorized_key:
     user: kyle
     key: https://github.com/kyleparisi.keys
+
+- lineinfile:
+    dest: /etc/sudoers.d/kyle
+    create: yes
+    line: 'kyle ALL=(ALL) NOPASSWD:ALL'

@@ -1,0 +1,18 @@
+---
+
+- name: add resilio package
+  lineinfile:
+    dest: /etc/apt/sources.list.d/resilio-sync.list
+    create: yes
+    line: deb http://linux-packages.resilio.com/resilio-sync/deb resilio-sync non-free
+
+- name: add resilio key
+  apt_key:
+    url: https://linux-packages.resilio.com/resilio-sync/key.asc
+
+- name: install resilio
+  apt:
+    update_cache: yes
+    name: resilio-sync
+
+# run: systemctl --user start  resilio-sync as your user at your convenience

@@ -15,4 +15,11 @@
     update_cache: yes
     name: resilio-sync
 
+- name: copy config.json file
+  copy:
+    dest: /home/kyle/.config/resilio-sync/
+    src: config.json
+    owner: kyle
+    group: kyle
+
 # run: systemctl --user start  resilio-sync as your user at your convenience

@@ -3,7 +3,5 @@
 - hosts: all,localhost
   become: true
   roles:
-    - { role: wormhole, tags: wormhole }
     - { role: users, tags: users}
     - { role: zerotier, tags: zerotier }
-    - { role: resilio, tags: resilio }

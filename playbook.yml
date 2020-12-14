@@ -4,4 +4,3 @@
   become: true
   roles:
     - { role: users, tags: users}
-    - { role: zerotier, tags: zerotier }

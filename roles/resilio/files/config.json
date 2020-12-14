@@ -1,9 +1,0 @@
-{
-    "storage_path" : "/home/kyle/.config/resilio-sync/storage",
-    "pid_file" : "/home/kyle/.config/resilio-sync/sync.pid",
-
-    "webui" :
-    {
-        "listen" : "0.0.0.0:8888"
-    }
-}

@@ -1,7 +1,0 @@
----
-
-- hosts: all,localhost
-  become: true
-  roles:
-    - { role: wormhole, tags: wormhole }
-    - { role: resilio, tags: resilio }

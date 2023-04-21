@@ -8,6 +8,7 @@ runcmd:
  - [ sh, -c, "git clone https://github.com/kyleparisi/freshserver.git /usr/local/src/freshserver" ]
  - [ sh, -c, "mkdir /tmp/ansible_local" ]
  - [ sh, -c, "mkdir /tmp/ansible_remote" ]
+ - [ sh, -c, "mkdir /etc/ansible" ]
  - [ sh, -c, "cat /usr/local/src/freshserver/ansible.cfg > /etc/ansible/ansible.cfg" ]
  - [ sh, -c, "ansible-playbook /usr/local/src/freshserver/playbook.yml" ]
 

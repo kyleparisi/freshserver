@@ -5,3 +5,4 @@
   roles:
     - { role: users, tags: users }
     - { role: docker, tags: docker }
+    - { role: awscli, tags: awscli }

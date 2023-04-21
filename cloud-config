@@ -1,0 +1,14 @@
+#cloud-config
+repo_update: true
+
+packages:
+ - ansible
+
+runcmd:
+ - [ sh, -c, "git clone https://github.com/kyleparisi/freshserver.git /usr/local/src/freshserver" ]
+ - [ sh, -c, "mkdir /tmp/ansible_local" ]
+ - [ sh, -c, "mkdir /tmp/ansible_remote" ]
+ - [ sh, -c, "cat /usr/local/src/freshserver/ansible.cfg > /etc/ansible/ansible.cfg" ]
+ - [ sh, -c, "ansible-playbook /usr/local/src/freshserver/playbook.yml" ]
+
+output : { all : '| tee -a /var/log/cloud-init-output-freshserver.log' }

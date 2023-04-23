@@ -12,3 +12,13 @@
     dest: /etc/sudoers.d/kyle
     create: yes
     line: 'kyle ALL=(ALL) NOPASSWD:ALL'
+
+- lineinfile:
+    dest: /etc/ssh/sshd_config
+    create: no
+    line: 'AcceptEnv AWS_*'
+
+- name: test ssd
+  shell: sshd -t
+  notify:
+    - sshd reload

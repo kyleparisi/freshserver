@@ -11,6 +11,7 @@
       - python3-pip
       - virtualenv
       - python3-setuptools
+      - amazon-ecr-credential-helper
 
 - name: Add Docker GPG apt Key
   apt_key:
@@ -27,6 +28,11 @@
     update_cache: yes
     name: docker-ce
 
+- name: Copy daemon.json
+  copy:
+    dest: /etc/docker/daemon.json
+    src: daemon.json
+
 - name: Start docker
   service:
     name: docker
@@ -36,4 +42,7 @@
   user:
     append: yes
     groups: docker
-    user: ubuntu
+    user: "{{ item }}"
+  loop:
+    - ubuntu
+    - kyle

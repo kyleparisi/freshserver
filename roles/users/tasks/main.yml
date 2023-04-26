@@ -21,4 +21,4 @@
 - name: test sshd
   shell: sshd -t
   notify:
-    - sshd reload
+    - sshd restarted

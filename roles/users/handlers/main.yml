@@ -1,6 +1,6 @@
 ---
 
-- name: sshd reload
+- name: sshd restarted
   service:
     name: sshd
-    state: reloaded
+    state: restarted

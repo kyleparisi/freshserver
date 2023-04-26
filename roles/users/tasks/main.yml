@@ -18,7 +18,7 @@
     create: no
     line: 'AcceptEnv AWS_*'
 
-- name: test ssd
+- name: test sshd
   shell: sshd -t
   notify:
     - sshd reload

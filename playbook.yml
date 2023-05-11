@@ -3,6 +3,7 @@
 - hosts: all,localhost
   become: true
   roles:
+    - { role: utils, tags: utils }
     - { role: users, tags: users }
     - { role: docker, tags: docker }
     - { role: awscli, tags: awscli }

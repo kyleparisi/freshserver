@@ -1,0 +1,9 @@
+---
+- name: Install utility system packages
+  apt:
+    name: "{{ packages }}"
+    install_recommends: no
+  vars:
+    packages:
+      - jq
+      - ca-certificates

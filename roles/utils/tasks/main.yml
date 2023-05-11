@@ -6,4 +6,3 @@
   vars:
     packages:
       - jq
-      - ca-certificates

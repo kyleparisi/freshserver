@@ -28,11 +28,6 @@
     update_cache: yes
     name: docker-ce
 
-- name: Copy daemon.json
-  copy:
-    dest: /etc/docker/daemon.json
-    src: daemon.json
-
 - name: Start docker
   service:
     name: docker

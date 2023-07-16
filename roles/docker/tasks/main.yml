@@ -40,4 +40,4 @@
     user: "{{ item }}"
   loop:
     - ubuntu
-    - kyle
+    - "{{ github_user }}"

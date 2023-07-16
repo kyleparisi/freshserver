@@ -1,17 +1,17 @@
 ---
 
 - user:
-    name: {{ github_user }}
+    name: "{{ github_user }}"
     shell: /bin/bash
 
 - authorized_key:
-    user: kyle
-    key: https://github.com/{{ github_user }}.keys
+    user: "{{ github_user }}"
+    key: "https://github.com/{{ github_user }}.keys"
 
 - lineinfile:
-    dest: /etc/sudoers.d/{{ github_user }}
+    dest: "/etc/sudoers.d/{{ github_user }}"
     create: yes
-    line: '{{ github_user }} ALL=(ALL) NOPASSWD:ALL'
+    line: "{{ github_user }} ALL=(ALL) NOPASSWD:ALL"
 
 - lineinfile:
     dest: /etc/ssh/sshd_config
@@ -23,6 +23,6 @@
   notify:
     - sshd restarted
 
-  copy:
+- copy:
     src: known_hosts
-    dest: /home/{{ github_user }}/.ssh/
+    dest: "/home/{{ github_user }}/.ssh/"

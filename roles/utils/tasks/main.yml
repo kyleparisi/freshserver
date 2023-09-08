@@ -7,3 +7,5 @@
     packages:
       - jq
       - ruby
+      - nodejs
+      - npm

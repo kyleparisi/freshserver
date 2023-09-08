@@ -7,11 +7,3 @@
     packages:
       - jq
       - ruby
-      - nodejs
-      - npm
-
-- name: Set permissions on global node_modules
-  file:
-    path: /usr/local/lib/node_modules
-    state: directory
-    mode: '0777'

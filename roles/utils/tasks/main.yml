@@ -11,6 +11,7 @@
       - npm
 
 - name: Set permissions on global node_modules
-  path: /usr/local/lib/node_modules
-  state: directory
-  mode: '0777'
+  file:
+    path: /usr/local/lib/node_modules
+    state: directory
+    mode: '0777'

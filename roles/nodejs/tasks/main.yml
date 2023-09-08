@@ -14,7 +14,7 @@
 - name: Install GPG
   apt:
     pkg: gnupg
-    state: installed
+    state: present
 
 - name: Import the NodeSource GPG key into apt
   apt_key:
@@ -36,5 +36,5 @@
   apt:
     pkg:
       - nodejs
-    state: installed
+    state: present
     update_cache: yes
